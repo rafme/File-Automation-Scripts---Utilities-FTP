@@ -14,9 +14,9 @@ REM -- Off of the SPS FTP Server for PO_Receipts --
 
 
 REM -- Download all XML Files from FTP Site for SPS_PO Reciepts
-@echo open > SPS_PO_GET.txt
-@echo username >>  SPS_PO_GET.txt
-@echo password >> SPS_PO_GET.txt
+@echo open sftp.name.net > SPS_PO_GET.txt
+@echo username username >>  SPS_PO_GET.txt
+@echo password password >> SPS_PO_GET.txt
 @echo !Title Processing... %FtpCommand% >> SPS_PO_DELETE.txt
 REM -- REPLACE THIS WITH LOCAL DIRECTORY FOR PO_RECEIPTS! --
 @echo lcd C:/Users/rmendez/Documents/SPS_PO >> SPS_PO_GET.txt
@@ -33,9 +33,9 @@ GOTO:EOF
 del SPS_PO_GET.txt
 
 REM -- Delete all XML Files from FTP Site for SPS_PO Reciepts to avoid Duplications
-@echo open > SPS_PO_DELETE.txt
-@echo username >>  SPS_PO_DELETE.txt
-@echo password >> SPS_PO_DELETE.txt
+@echo open sftp.name.net > SPS_PO_DELETE.txt
+@echo username username  >>  SPS_PO_DELETE.txt
+@echo password password  >> SPS_PO_DELETE.txt
 @echo !Title Processing... %FtpCommand% >> SPS_PO_DELETE.txt
 REM -- REPLACE THIS WITH LOCAL DIRECTORY FOR PO_RECEIPTS! --
 @echo lcd C:/Users/rmendez/Documents/SPS_PO >> SPS_PO_DELETE.txtt
